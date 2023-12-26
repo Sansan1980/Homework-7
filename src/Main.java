@@ -67,6 +67,50 @@ public class Main {
             System.out.print(a + " ");
             a = a - 1;
         }
+        /*
+        Задача 3
+В стране Y население — 12 миллионов человек.
+Рождаемость составляет 17 человек на 1000, смертность — 8 человек. Рассчитайте, какая численность населения будет через
+10 лет, если показатели рождаемости и смертности постоянны.
+В консоль выведите результат операции на каждый год в формате: «Год …, численность населения составляет …».
+         */
+
+        System.out.println();
+        int population = 12_000_000;
+        int coefficient = 1000;
+        int replenishment = 17;
+        int decreasing = 8;
+        int replenishmentYear = replenishment - decreasing ;
+        int age = 10;
+        a = 0;
+        while ( a < age){
+            a = a + 1;
+            population = population + (population / coefficient * replenishmentYear) ;
+
+
+            System.out.println("Год "+ a + ", численность населения составляет "+ population );
+        }
+            System.out.println("");
+
+
+/*
+        double  populat = 12_000_000;
+        double  coeff = 1000;
+        double  replen = 17/coeff;
+        double decreas = 8/coeff;
+        double replenishmentY = replen - decreas  ;
+       age = 10;
+        a = 0;
+        while ( a < age){
+            a = a + 1;
+            populat = populat + (populat * replenishmentY) ;
+
+
+            System.out.println("Год "+ a + ", численность населения составляет "+ population );
+        }
+
+ */
+
 
 
 

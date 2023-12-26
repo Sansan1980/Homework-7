@@ -76,6 +76,7 @@ public class Main {
          */
 
         System.out.println();
+        System.out.println( "Задача № 3");
         int population = 12_000_000;
         int coefficient = 1000;
         int replenishment = 17;
@@ -86,14 +87,12 @@ public class Main {
         while ( a < age){
             a = a + 1;
             population = population + (population / coefficient * replenishmentYear) ;
-
-
             System.out.println("Год "+ a + ", численность населения составляет "+ population );
         }
             System.out.println("");
 
 
-/*
+/*        System.out.println(" через double")
         double  populat = 12_000_000;
         double  coeff = 1000;
         double  replen = 17/coeff;
@@ -110,6 +109,20 @@ public class Main {
         }
 
  */
+        System.out.println( "Задача № 3 через цикл for");
+       population = 12_000_000;
+       coefficient = 1000;
+       replenishment = 17;
+       decreasing = 8;
+       replenishmentYear = replenishment - decreasing ;
+       age = 10;
+       for(a = 0; a < age; a = a + 1, population = population + (population / coefficient * replenishmentYear), System.out.println("Год "+ a + ", численность населения составляет "+ population  ))
+        {
+
+        }
+          // population = population + (population / coefficient * replenishmentYear) ;
+         //  System.out.println("Год "+ a + ", численность населения составляет "+ population );
+
 
 
 

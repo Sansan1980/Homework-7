@@ -1,3 +1,5 @@
+import java.sql.SQLOutput;
+
 public class Main {
     public static void main(String[] args) {
         /*
@@ -8,40 +10,40 @@ public class Main {
 Результат программы должен быть выведен в консоль с тем количеством месяцев, которое необходимо для накопления данной суммы.
  Формат сообщения: «Месяц …, сумма накоплений равна … рублей» .
         */
-        System.out.println( " do-while");
+        System.out.println(" do-while");
         int capital = 2_459_000;
-        int monthlyIncome = 0 ;
+        int monthlyIncome = 0;
         int firstDeposit = 15000;
         int mounth = 0;
-        do{
+        do {
             mounth = mounth + 1;
             monthlyIncome = monthlyIncome + firstDeposit;
-            System.out.println("Месяц "+ mounth + ", сумма накоплений равна "+ monthlyIncome +" рублей");
+            System.out.println("Месяц " + mounth + ", сумма накоплений равна " + monthlyIncome + " рублей");
 
         }
-       while (monthlyIncome <= capital);
+        while (monthlyIncome <= capital);
 
         System.out.println();
-        System.out.println( " while");
+        System.out.println(" while");
 
-         capital = 2_459_000;
-         monthlyIncome = 0 ;
-         firstDeposit = 15000;
-         mounth = 0;
-        while (monthlyIncome <= capital){
+        capital = 2_459_000;
+        monthlyIncome = 0;
+        firstDeposit = 15000;
+        mounth = 0;
+        while (monthlyIncome <= capital) {
             mounth = mounth + 1;
             monthlyIncome = monthlyIncome + firstDeposit;
-            System.out.println("Месяц "+ mounth + ", сумма накоплений равна "+ monthlyIncome +" рублей");
+            System.out.println("Месяц " + mounth + ", сумма накоплений равна " + monthlyIncome + " рублей");
         }
         System.out.println();
-        System.out.println( " for ");
+        System.out.println(" for ");
 
         System.out.println();
         capital = 2_459_000;
-        monthlyIncome = 0 ;
+        monthlyIncome = 0;
         firstDeposit = 15000;
         mounth = 0;
-        for (; monthlyIncome <= capital; mounth++, monthlyIncome = monthlyIncome + firstDeposit ) {
+        for (; monthlyIncome <= capital; mounth++, monthlyIncome = monthlyIncome + firstDeposit) {
             System.out.println("Месяц " + mounth + ", сумма накоплений равна " + monthlyIncome + " рублей");
         }
 
@@ -56,14 +58,14 @@ public class Main {
 10 9 8 7 6 5 4 3 2 1
          */
         System.out.println();
-        System.out.println( "Задача № 2 ");
+        System.out.println("Задача № 2 ");
         int a = 0;
-         while(  a < 10){
-           a = a + 1;
+        while (a < 10) {
+            a = a + 1;
             System.out.print(a + " ");
         }
         System.out.println();
-        while(  a > 0 ) {
+        while (a > 0) {
             System.out.print(a + " ");
             a = a - 1;
         }
@@ -76,20 +78,20 @@ public class Main {
          */
 
         System.out.println();
-        System.out.println( "Задача № 3");
+        System.out.println("Задача № 3");
         int population = 12_000_000;
         int coefficient = 1000;
         int replenishment = 17;
         int decreasing = 8;
-        int replenishmentYear = replenishment - decreasing ;
+        int replenishmentYear = replenishment - decreasing;
         int age = 10;
         a = 0;
-        while ( a < age){
+        while (a < age) {
             a = a + 1;
-            population = population + (population / coefficient * replenishmentYear) ;
-            System.out.println("Год "+ a + ", численность населения составляет "+ population );
+            population = population + (population / coefficient * replenishmentYear);
+            System.out.println("Год " + a + ", численность населения составляет " + population);
         }
-            System.out.println("");
+        System.out.println("");
 
 
 /*        System.out.println(" через double")
@@ -109,16 +111,16 @@ public class Main {
         }
 
  */
-        System.out.println( "Задача № 3 через цикл for");
-       population = 12_000_000;
-       coefficient = 1000;
-       replenishment = 17;
-       decreasing = 8;
-       replenishmentYear = replenishment - decreasing ;
-       age = 10;
-       for(a = 0; a < age; a = a + 1, population = population + (population / coefficient * replenishmentYear), System.out.println("Год "+ a + ", численность населения составляет "+ population  )){
+        System.out.println("Задача № 3 через цикл for");
+        population = 12_000_000;
+        coefficient = 1000;
+        replenishment = 17;
+        decreasing = 8;
+        replenishmentYear = replenishment - decreasing;
+        age = 10;
+        for (a = 0; a < age; a = a + 1, population = population + (population / coefficient * replenishmentYear), System.out.println("Год " + a + ", численность населения составляет " + population)) {
 
-       }
+        }
        /* {
 
            population = population + (population / coefficient * replenishmentYear) ;
@@ -139,26 +141,26 @@ public class Main {
         System.out.println("");
         System.out.println("Задача № 4");
 
-           int fnlCapital = 12_000_000;
-           firstDeposit = 15000;
-           int  interestDeposit = 7;
-           mounth = 0;
-           int deposit = 0;
-           while(  deposit <= fnlCapital ) {
-               mounth = mounth + 1;
-               deposit = firstDeposit + (deposit )+ (deposit/100*interestDeposit);
-               System.out.println("Месяц " + mounth + ", сумма накоплений равна " + deposit + " рублей");
+        int fnlCapital = 12_000_000;
+        firstDeposit = 15000;
+        int interestDeposit = 7;
+        mounth = 0;
+        int deposit = 0;
+        while (deposit <= fnlCapital) {
+            mounth = mounth + 1;
+            deposit = firstDeposit + (deposit) + (deposit / 100 * interestDeposit);
+            System.out.println("Месяц " + mounth + ", сумма накоплений равна " + deposit + " рублей");
 
-           }
+        }
         System.out.println(" через for");
         fnlCapital = 12_000_000;
         firstDeposit = 15000;
         interestDeposit = 7;
         mounth = 0;
         deposit = 0;
-           for(; deposit <= fnlCapital ; mounth++,deposit = firstDeposit + (deposit )+ (deposit/100*interestDeposit)  ){
-               System.out.println("Месяц " + mounth + ", сумма накоплений равна " + deposit + " рублей");
-           }
+        for (; deposit <= fnlCapital; mounth++, deposit = firstDeposit + (deposit) + (deposit / 100 * interestDeposit)) {
+            System.out.println("Месяц " + mounth + ", сумма накоплений равна " + deposit + " рублей");
+        }
         System.out.println("");
            /*
 
@@ -172,9 +174,9 @@ public class Main {
         mounth = 0;
         deposit = 0;
         System.out.println("задача № 5");
-        for (;deposit <= fnlCapital; mounth++){
-            deposit = firstDeposit + (deposit )+ (deposit/100*interestDeposit);
-            if ( mounth % 6 ==0 ) {
+        for (; deposit <= fnlCapital; mounth++) {
+            deposit = firstDeposit + (deposit) + (deposit / 100 * interestDeposit);
+            if (mounth % 6 == 0) {
                 System.out.println("Месяц " + mounth + ", сумма накоплений равна " + deposit + " рублей");
             }
         }
@@ -212,35 +214,27 @@ public class Main {
          */
         System.out.println();
         System.out.println("Задача № 7");
-       // int friday = 6;
+        // int friday = 6;
         int endMonth = 31;
-        for(int b = 1, friday = 6 ; b <31 ; b = b + 1){
+        for (int b = 1, friday = 6; b < 31; b = b + 1) {
             if (b % friday == 0) {
                 System.out.println("Сегодня пятница," + b + "-е число. Необходимо подготовить отчет».");
 
             }
-
-
         }
+        /*
+        Задача 8
+Нам нужно написать астрономическое приложение, которое считает, когда над Землей пролетает комета.
+Известно, что комета пролетает каждый 79-й год, начиная с нулевого.
+В консоль нужно вывести все годы за последние 200 лет, когда появлялась комета, а также следующий год ее появления(ближайшие 100 лет).
+Для вычисления периода можно создать две дополнительные переменные, которые содержат год за 200 лет до текущего
+(из созданной ранее переменной) в качестве старта и 100 лет после в качестве завершения периода расчета.
+В результате решения задачи в консоли должен получиться следующий результат:
+1896
+1975
+2054
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        }
-    }
+         */
 
 
 

@@ -178,6 +178,29 @@ public class Main {
                 System.out.println("Месяц " + mounth + ", сумма накоплений равна " + deposit + " рублей");
             }
         }
+        System.out.println();
+        System.out.println("Задача № 6");
+        /*
+        Задача 6
+Василий решил, что будет копить деньги ближайшие 9 лет. Он хочет знать, какой будет сумма его
+накоплений каждые полгода на протяжении этих 9 лет.
+Исходная сумма всё та же — 15 тысяч рублей, проценты банка — 7% ежемесячно.
+Напишите программу, которая будет выводить сумму накоплений за каждые полгода в течение 9 лет.
+         */
+
+        firstDeposit = 15000;
+        interestDeposit = 7;
+        deposit = 0;
+        int year = 9;
+        int generalMounth = year * 12;
+
+        for (a = 0; a <= generalMounth; a++) {
+            deposit = firstDeposit + (deposit) + (deposit / 100 * interestDeposit);
+            if (a % 6 == 0) {
+                System.out.println("Месяц " + a + ", сумма накоплений равна " + deposit + " рублей");
+
+            }
+        }
 
 
 

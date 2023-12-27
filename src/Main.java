@@ -116,12 +116,56 @@ public class Main {
        decreasing = 8;
        replenishmentYear = replenishment - decreasing ;
        age = 10;
-       for(a = 0; a < age; a = a + 1, population = population + (population / coefficient * replenishmentYear), System.out.println("Год "+ a + ", численность населения составляет "+ population  ))
-        {
+       for(a = 0; a < age; a = a + 1, population = population + (population / coefficient * replenishmentYear), System.out.println("Год "+ a + ", численность населения составляет "+ population  )){
 
-        }
-          // population = population + (population / coefficient * replenishmentYear) ;
-         //  System.out.println("Год "+ a + ", численность населения составляет "+ population );
+       }
+       /* {
+
+           population = population + (population / coefficient * replenishmentYear) ;
+           System.out.println("Год "+ a + ", численность населения составляет "+ population );
+       }
+
+        */
+        /*
+
+Задача 4
+Василий решил положить деньги на накопительный счет, где каждый месяц к сумме его вклада добавляется еще 7%.
+Первоначальная сумма вклада — 15 тысяч рублей.
+Вычислите и выведите в консоль, сколько месяцев Василию нужно будет копить, чтобы собрать сумму в 12 миллионов
+рублей при условии, что процент банка от накоплений не меняется, а всегда равен 7%.
+Выведите в консоль результат программы с указанием суммы накоплений по каждому месяцу.
+
+         */
+        System.out.println("");
+        System.out.println("Задача № 4");
+
+           int fnlCapital = 12_000_000;
+           firstDeposit = 15000;
+           int  interestDeposit = 7;
+           mounth = 0;
+           int deposit = 0;
+           while(  deposit <= fnlCapital ) {
+               mounth = mounth + 1;
+               deposit = firstDeposit + (deposit )+ (deposit/100*interestDeposit);
+               System.out.println("Месяц " + mounth + ", сумма накоплений равна " + deposit + " рублей");
+
+           }
+        System.out.println(" через for");
+        fnlCapital = 12_000_000;
+        firstDeposit = 15000;
+        interestDeposit = 7;
+        mounth = 0;
+        deposit = 0;
+           for(; deposit <= fnlCapital ; mounth++,deposit = firstDeposit + (deposit )+ (deposit/100*interestDeposit)  ){
+               System.out.println("Месяц " + mounth + ", сумма накоплений равна " + deposit + " рублей");
+           }
+
+
+
+
+
+
+
 
 
 

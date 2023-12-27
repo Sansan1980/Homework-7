@@ -235,6 +235,20 @@ public class Main {
 2054
 
          */
+        System.out.println();
+        System.out.println(" Задача № 8");
+        int cyclicalYear = 79;
+        int lastYear = 200;
+        int nextYear = 100;
+        int thisYear = 2023;
+
+        for (int h = 0; h <= thisYear + nextYear; h = h + cyclicalYear) {
+            if (thisYear - lastYear < h && h <= thisYear + nextYear)
+                System.out.println(h);
+
+        }
+    }
+}
 
 
 

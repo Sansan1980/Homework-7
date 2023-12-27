@@ -159,6 +159,28 @@ public class Main {
            for(; deposit <= fnlCapital ; mounth++,deposit = firstDeposit + (deposit )+ (deposit/100*interestDeposit)  ){
                System.out.println("Месяц " + mounth + ", сумма накоплений равна " + deposit + " рублей");
            }
+        System.out.println("");
+           /*
+
+         Задача 5
+Видоизмените программу таким образом, чтобы в консоль выводились не все месяцы подряд,
+а только каждый шестой. Должны быть видны накопления за 6-й, 12-й, 18-й, 24-й и следующие месяцы.
+            */
+        fnlCapital = 12_000_000;
+        firstDeposit = 15000;
+        interestDeposit = 7;
+        mounth = 0;
+        deposit = 0;
+        System.out.println("задача № 5");
+        for (;deposit <= fnlCapital; mounth++){
+            deposit = firstDeposit + (deposit )+ (deposit/100*interestDeposit);
+            if ( mounth % 6 ==0 ) {
+                System.out.println("Месяц " + mounth + ", сумма накоплений равна " + deposit + " рублей");
+            }
+        }
+
+
+
 
 
 

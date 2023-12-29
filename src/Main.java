@@ -65,9 +65,9 @@ public class Main {
             System.out.print(a + " ");
         }
         System.out.println();
-        while (a > 0) {
+        for (;a > 0;a = a - 1) {
             System.out.print(a + " ");
-            a = a - 1;
+
         }
         /*
         Задача 3
@@ -118,16 +118,11 @@ public class Main {
         decreasing = 8;
         replenishmentYear = replenishment - decreasing;
         age = 10;
-        for (a = 0; a < age; a = a + 1, population = population + (population / coefficient * replenishmentYear), System.out.println("Год " + a + ", численность населения составляет " + population)) {
-
+        for (a = 0; a < age; a = a + 1) {
+            population = population + (population / coefficient * replenishmentYear);
+            System.out.println("Год " + a + ", численность населения составляет " + population);
         }
-       /* {
 
-           population = population + (population / coefficient * replenishmentYear) ;
-           System.out.println("Год "+ a + ", численность населения составляет "+ population );
-       }
-
-        */
         /*
 
 Задача 4
@@ -158,7 +153,8 @@ public class Main {
         interestDeposit = 7;
         mounth = 0;
         deposit = 0;
-        for (; deposit <= fnlCapital; mounth++, deposit = firstDeposit + (deposit) + (deposit / 100 * interestDeposit)) {
+        for (; deposit <= fnlCapital; mounth++){
+            deposit = firstDeposit + (deposit) + (deposit / 100 * interestDeposit);
             System.out.println("Месяц " + mounth + ", сумма накоплений равна " + deposit + " рублей");
         }
         System.out.println("");
@@ -214,9 +210,9 @@ public class Main {
          */
         System.out.println();
         System.out.println("Задача № 7");
-        // int friday = 6;
+        int friday = 6;
         int endMonth = 31;
-        for (int b = 1, friday = 6; b < 31; b = b + 1) {
+        for (int b = 1 ; b < 31; b = b + 1) {
             if (b % friday == 0) {
                 System.out.println("Сегодня пятница," + b + "-е число. Необходимо подготовить отчет».");
 
